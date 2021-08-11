@@ -1,0 +1,419 @@
+/*
+ 1-
+
+*/
+/* General Style */
+:root{
+    --mainColor: #D35400;
+    --secondary: #3498DB;
+    --whiteColor: #fff;
+    --blackColor: #000;
+    --blackLight: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+body{height: 5000px;}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+/* Common Style */
+.pd-y{
+    padding: 80px 0;
+}
+.orange{
+    color: var(--mainColor);
+}
+.links{
+    color: var(--secondary);
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+section .row:first-child{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.section_title{
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bolder;
+    margin: auto;
+}
+.section_title::after{
+    content: "";
+    margin-top: 15px;
+    display: block;
+    height: 5px;
+    width: 70%;
+    background-color: var(--mainColor);
+    transition: .5s;
+}
+.section_title:hover::after{
+    width: 100%;
+}
+.section_desc{
+    padding: 0 20%;
+    color: var(--blackLight);
+    text-align: center;
+}
+@media (max-width: 450px){
+    .section_title{
+        font-size: 25px;
+    }
+    .section_desc{
+        font-size: 15px;
+    }
+}
+.pointer{
+    cursor: pointer;
+}
+.hero-btn{
+    text-align: center;
+    padding: 12px 16px;
+    border: none;
+    background: var(--mainColor);
+    transition: .5s;
+}
+.hero-btn:hover{
+    opacity: .7;
+}
+@media (max-width: 350px){
+    .hero-btn{
+        font-size: 10px;
+    }
+}
+.hero-info{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.hero-img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+}
+/* Section Header */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    height: 70px;
+    background-color: rgba(253, 254, 254, 0.3);
+    transition: background 1s;
+}
+.black-bg{
+    background-color: var(--blackLight);
+}
+.navbar-logo .logo{
+    font-weight: bolder;
+    letter-spacing: 0.01px;
+    font-size: 30px;
+}
+.box-list .fa{
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    display: none;
+}
+.navbar .container .fa{
+    display: none;
+}
+.navbar-list{
+    margin: 10px 0;
+}
+.navbar-list li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.navbar-list li a{
+    font-size: 20px;
+}
+.navbar-list li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: var(--mainColor);
+    transform: translate3d(0,1,1);
+    transform-origin: center;
+    transition: .5s;
+}
+.navbar-list li a:hover::after{
+    width: 100%;
+    transform: translate3d(1,1,1);
+}
+@media (max-width: 992px){
+    .box-list{
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        margin: 0;
+        top: 0;
+        right: -300px;
+        background: var(--mainColor);
+        transition: 1s;
+        z-index: 99999;
+    } 
+    .navbar-list li{
+        display: block; 
+        width: 100%;
+        margin: 0 0;
+    }
+    .navbar-list li a{
+        display: block; 
+        width: 100%;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: center;
+    }
+    .navbar-list li a:hover{
+        background: var(--blackLight);
+    }
+    .box-list .fa, .navbar .container .fa{
+        display: block;
+    }
+}
+@media (max-width: 560px){
+    .navbar-logo .logo{
+        font-size: 20px;
+    }
+    .box-list{
+        width: 50%;
+    } 
+}
+@media (max-width: 350px){
+    .navbar-logo .logo{
+        font-size: 17px;
+    }
+    .box-list{
+        width: 60%;
+    } 
+}
+
+/* Section Home And Start */
+section.home{
+    background-image: url(../images/nfgym080721_0.jpg);
+}
+section.start{
+    background-image: url(../images/nfgym080721_0.jpg);
+    height: 60vh;
+}
+.home-item-desc , .start-item-desc{
+    font-size: 20px;
+}
+.home-item-title , .start-item-title{
+    font-size: 60px;
+    font-weight: bolder;
+}
+.start-item-title{
+    font-size: 40px;
+}
+@media (max-width:600px){
+    .home-item-desc, .start-item-desc{
+        font-size: 15px;
+    }
+    .home-item-title{
+        font-size: 40px;
+    }
+    .start-item-title{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:400px){
+    .home-item-desc , .start-item-desc{
+        font-size: 13px;
+    }
+    .home-item-title{
+        font-size: 30px;
+    }
+    .start-item-title{
+        font-size: 20px;
+    }
+}
+/* Section Choose */
+.choose-item-img{
+    width: 30%;
+    height: 130px;
+    border-radius: 10px;
+}
+.choose-item-img img{
+    width: 95%;
+    background-color: var(--whiteColor);
+    border-radius: 10px;
+    transform: rotate(-50deg);
+}
+.choose-item-info-desc{
+    color: gray;
+}
+@media (max-width: 782px ){
+    .choose-item-info-title{
+        font-size: 20px;
+    }
+    .choose-item-info-desc{
+        font-size: 15px;
+    }
+}
+
+/* Section Classes */
+.classes-item-bg{
+    height: 45vh;
+    background-image: url(../images/images.jpg);
+    border-radius: 5x;
+}
+.classes-item-bg .overlay{
+    border-radius: 5px;
+}
+.classes-item-btns .btn{
+    padding: 25px 0;
+}
+.classes-item-btns .btn:hover , .classes-item-btns .active{
+    color: var(--mainColor);
+}
+.classes-item-btns .btn:last-child:hover{
+    color: var(--whiteColor);
+}
+
+/* Section Schedule */
+.schedule{
+    background-image: url(../images/04run-gym-videoSixteenByNineJumbo1600.jpg);
+    height: 170vh;
+}
+@media (max-width: 970px){
+    .schedule .section_title{
+        font-size: 30px;
+    }
+    .schedule .section_desc{
+        font-size: 15px;
+    }
+    .schedule .breadcrumb{
+        font-size: 10px;
+    }
+}
+@media (max-width: 300px){
+    .schedule{
+        width: 100%;
+    }
+    .schedule .section_title{
+        font-size: 20px;
+    }
+    .schedule .section_desc{
+        font-size: 10px;
+    }
+    .schedule table{
+        font-size: 10px;
+    }
+}
+/* Section Expert */
+.expert-item{
+    margin: 10px 0;
+}
+.expert-item-bg{
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+.expert-item-bg-1{
+    background-image: url(../images/maxresdefault.jpg);
+}
+.expert-item-bg-2{
+    background-image: url(../images/Gym-Industry-–-Treadmill-witnesses-uptick-in-demand-in-last.jpg);
+}
+.expert-item-bg-3{
+    background-image: url(../images/fitness-gym-man-barbell.jpg);
+}
+
+/* Section Footer */
+
+.footer{
+    overflow-x: hidden;
+}
+.footer-item:first-child{
+    min-width: 100%;
+
+}
+.footer-item:last-child{
+    background-image: url(../images/home-gym.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+
+.form-reply{
+    width: 90%;
+    margin: auto;
+}
+
+.form-reply input,.form-reply textarea{
+    background-color: #eeee;
+    outline: none;
+}
+.input-half-width{
+    width: 49%;
+}
+.input-half-width:nth-child(2){
+    margin-left: 1%;
+}
+.reply-text-area{
+    width: 99.5%;
+}
+.input-name,.input-email,.reply-text-area{
+    border: none;
+    padding: 10px 5px;
+    background: var(--grayC-light);
+    margin-top: 10px;
+}
+@media (max-width: 374px){
+    .footer{
+        width: 100%;
+        font-size: 12px;
+    }
+    .input-half-width{
+        width: 99.5%;
+    }
+    .input-half-width:nth-child(2){
+        margin-left: 0;
+    }
+}
+
+/* btn come back to up */
+.scrollTop{
+    display: none;
+    position: fixed;
+    left: 40px;
+    bottom: 20px;
+    z-index: 9999999;
+    border-radius: 5px;
+}
+.scrollTop i{
+    transform: rotate(-90deg);
+}
