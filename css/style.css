@@ -216,7 +216,7 @@ section .row:first-child{
 
 /* Section Home And Start */
 section.home{
-    background-image: url(../images/nfgym080721_0.jpg);
+    background-image: url(../images/home-banner.jpg);
 }
 section.start{
     background-image: url(../images/dumbbell-press-bench-man-workout-1109.jpg);
@@ -282,7 +282,7 @@ section.start{
 /* Section Classes */
 .classes-item-bg{
     height: 45vh;
-    background-image: url(../images/images.jpg);
+    background-image: url(../images/img.jpg);
     border-radius: 5x;
 }
 .classes-item-bg .overlay{
@@ -343,7 +343,7 @@ section.start{
     background-image: url(../images/maxresdefault.jpg);
 }
 .expert-item-bg-2{
-    background-image: url(../images/Gym-Industry-–-Treadmill-witnesses-uptick-in-demand-in-last.jpg);
+    background-image: url(../images/img2.jpeg);
 }
 .expert-item-bg-3{
     background-image: url(../images/fitness-gym-man-barbell.jpg);
